@@ -2,25 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
-<header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>   
 
 <body>
-    <h1>Hello, I'm Chihiro</h1>
-    <p>Shures nice to meet you</p>
 
-    <button onclick="sayHello()">Click me</button>
+    <header>
+        <nav>
+            <a class="logo" href="">Chihiro</a>
+
+            <div>
+                <a class="header_button" href="#about">About</a>
+                <a class="header_button" href="#projects">Projects</a>
+                <a class="header_button" href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="" class="page active">
+        <h1>Hello, I'm Chihiro</h1>
+        <p>Sure is nice to meet you</p>
+        <button onclick="sayHello()">Click me</button>
+        </section>
+
+        <section id="about" class="page">
+            <h1>Donate 1 dollar to me</h1>
+            <p></p>
+            <button onclick="sayHello()">Click me</button>
+        </section>
+
+        <section id="projects" class="page">
+            <h1>My Projects</h1>
+        </section>
+
+        <section id="contact" class="page">
+            <h1>Contact Me</h1>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chihiro. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
