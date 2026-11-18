@@ -42,6 +42,10 @@ nav div {
     margin-left: auto;
 }
 
+.header_buttons {
+    display: flex;
+}
+
 .header_button {
     color: white;
     text-decoration: none;
