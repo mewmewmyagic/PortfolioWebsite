@@ -1,67 +1,80 @@
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
     background-color: #171717;
     color: white;
     font-family: Arial, sans-serif;
-
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
-/* HEADER */
+/* =========================
+   HEADER & NAVIGATION
+========================= */
 
 header {
+    width: 100%;
     background-color: #697565;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     padding: 10px 40px;
 }
-
-/* LOGO */
-
-.logo {
-    font-family:  'Monoton', sans-serif;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-}
-/* NAVIGATION */
 
 nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 20px;
     width: 100%;
 }
 
-nav div {
-    margin-left: auto;
+/* Logo */
+
+.logo {
+    font-family: 'Monoton', sans-serif;
+    font-size: 30px;
+
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
 }
+
+/* Navigation links */
 
 .header_buttons {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .header_button {
+    padding: 10px;
     color: white;
     text-decoration: none;
     font-size: 16px;
-    padding: 10px;
+    white-space: nowrap;
 }
 
 nav a:hover {
     color: #cccccc;
 }
 
-/* MAIN CONTENT */
+/* =========================
+   MAIN CONTENT
+========================= */
 
 main {
-    text-align: center;
     flex: 1;
+    text-align: center;
 }
 
 main h1 {
@@ -73,6 +86,18 @@ p {
     font-size: 12px;
 }
 
+/* Pages */
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Buttons */
+
 button {
     padding: 12px 24px;
     background-color: #444444;
@@ -81,10 +106,37 @@ button {
     cursor: pointer;
 }
 
-.page {
-    display: none;
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
 }
 
-.page.active {
-    display: block;
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+    header {
+        padding: 10px 12px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .header_buttons {
+        gap: 0;
+    }
+
+    .header_button {
+        font-size: 13px;
+        padding: 8px 5px;
+    }
 }
